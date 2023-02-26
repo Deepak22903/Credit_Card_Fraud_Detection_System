@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Credit Card
+{% endblock title %}
+
+{% block content %}
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'home_page_css .css' %}">
+
+</head>
+
+
+
+<div class="text-center">
+			{% if not user.is_authenticated %}
+				<h1> <b> credit card fraud detection using machine learning   </b> </h1>
+			{% else %}
+				<h1> <b> Welcome to credit card fraud detection using machine learning system, {{ user }} . ! </b> </h1>
+			{% endif %}
+
+	</div>
+
+		<br>
+		
+		<div class="w3-content w3-section" style="max-width:100%">
+			<img class="mySlides w3-animate-right" src="{% static 'img/c1.jpg' %}" style="height:400px;width:100%">
+			<img class="mySlides w3-animate-right" src="{% static 'img/c2.jpg' %}" style="height:400px;width:100%">
+			<img class="mySlides w3-animate-right" src="{% static 'img/c3.jpg' %}" style="height:400px;width:100%">
+			<img class="mySlides w3-animate-right" src="{% static 'img/c4.jpg' %}" style="height:400px;width:100%">
+			<img class="mySlides w3-animate-right" src="{% static 'img/c5.jpg' %}" style="height:400px;width:100%">
+		  </div>
+		  
+
+				<div class="row justify-content-center ">
+					<div class="text-center">
+		
+					 <br>
+				<p style="text-align:justify;" >	
+					<b>
+						The credit card industry has become extremely competitive. To survive, financial institutions need to offer their credit card customers with more innovative financial services that provide a personalized customer experience beyond their banking needs. While we are witnessing this high competition that aims to provide better services to credit card holders. In this paper, we define and describe the steps that can be taken to build a behavioural-based segmentation model that differentiates credit cardholders based on their purchases data. By using DNN we get result for behavioural-based credit card users’ segmentation. 
+						<br>
+						<br>
+
+						Credit card is the well-accepted manner of remission in financial field. With the rising number of users across the globe, risks on usage of credit card have also been increased, where there is danger of stealing credit card details and committing frauds. Traditionally, machine learning area has been developing algorithms that have certain assumptions on underlying distribution of data, such as data should have predetermined and fixed distribution. Real-word situations are different than this constrained model; rather applications often face problems such as unbalanced data distribution. Additionally, data picked from non-stationary environments are also frequent that results in the sudden drifts in the concepts. These issues have been separately addressed by the researcher.
+
+					</b>			
+			</div>
+		</div>
+	
+			
+
+		<script>
+			var myIndex = 0;
+			carousel();
+			
+			function carousel() {
+			  var i;
+			  var x = document.getElementsByClassName("mySlides");
+			  for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";  
+			  }
+			  myIndex++;
+			  if (myIndex > x.length) {myIndex = 1}    
+			  x[myIndex-1].style.display = "block";  
+			  setTimeout(carousel, 2500);    
+			}
+		</script>
+					
+			
+{% endblock content %}
